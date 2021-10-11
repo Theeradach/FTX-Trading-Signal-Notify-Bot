@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 from modules.TradingSignal import TradingSignal
 from modules.LineNotify import LineNotify
 from dotenv import dotenv_values
