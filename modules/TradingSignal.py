@@ -89,6 +89,7 @@ class TradingSignal():
 
     def __sendLineMsg(self):
         print("\n""####### Signal and Trend #####")
+        print("Exchange = ", exchange)
         print("Pair   = ", self.pair)
         print("Trend  = ", self.trend)
         print("Signal = ", self.signal)
