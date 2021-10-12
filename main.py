@@ -8,6 +8,7 @@ from dotenv import dotenv_values
 pairs     = dotenv_values(".env")['pairs']      # pair coins
 timeframe = dotenv_values(".env")['timeframe']  # timeframe : 1m 5m 1h 4h 1d
 limit     = dotenv_values(".env")['limit']      # amount of candle sticks
+exchange  = dotenv_values(".env")['exchange']
 
 if __name__ == "__main__":
     t = TradingSignal()
@@ -20,3 +21,5 @@ if __name__ == "__main__":
             print(e)
             LineNotify().sendMessage(f"{pair} error occured : {e}")
     
+# check if bot still running.
+LineNotify().sendMessage(f"{exchange} Bot still running")
