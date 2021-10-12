@@ -9,6 +9,7 @@ apiKey    = dotenv_values(".env")['apiKey']
 secret    = dotenv_values(".env")['secret']
 password  = dotenv_values(".env")['password']
 Account_name  = dotenv_values(".env")['accountName']
+exchange  = dotenv_values(".env")['exchange']
 
 class TradingSignal():
     def __init__(self):
@@ -109,6 +110,7 @@ class TradingSignal():
     def __genMessage(self) -> str:
         message = f"""
             {self.pair} : {self.signal}
+            Exchange : {exchange}
             Trend : {self.trend}
             Time Frame : {self.timeframe}
             Close Price : {self.closePrice}
