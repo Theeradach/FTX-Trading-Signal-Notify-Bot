@@ -16,10 +16,10 @@ if __name__ == "__main__":
 
     for pair in pairs.split(","):
         try:
-            t._getTradingSignal(pair.strip(), timeframe, limit)
+            t._getTradingSignal(f"{pair.strip()}-PERP", timeframe, limit)
         except Exception as e:
             print(e)
-            LineNotify().sendMessage(f"{pair} error occured : {e}")
+            LineNotify().sendMessage(f"{pair}-PERP error occured : {e}")
     
 # check if bot still running.
 LineNotify().sendMessage(f"{exchange} Bot still running")
