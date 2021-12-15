@@ -29,8 +29,9 @@
 ```
 - sudo apt-get install cron
 - crontab -e
+- Bot will run at 7:00 and 19:00
 ```
-    0 * * * * bash /home/jackky1929/FTX-Trading-Signal-Notify-Bot/runBot.sh > /tmp/trading-bot.log 
+    0 7-19/12 * * * bash /root/FTX-Trading-Signal-Notify-Bot/runBot.sh > /tmp/ftx-trade-signal-bot.log
 ```
 - sudo service cron restart
 ```

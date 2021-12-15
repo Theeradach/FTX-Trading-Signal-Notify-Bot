@@ -5,9 +5,13 @@
 
 Example Message
 ```
-    ZRX/USD : Buy Signal 
-    Tread : Up Trend 
-    Close Price : 1.111
+    Symbol : ETH-PERP
+    Position : Short (Sell)
+    Exchange : FTX
+    Trend : Down Trend
+    Close Price : 3773.8
+    RSI : 38.67 (None)
+    BB : Below Mid
 ```
 
 ## INSTALLATION GUIDE
