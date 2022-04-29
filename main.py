@@ -22,4 +22,4 @@ if __name__ == "__main__":
             LineNotify().sendMessage(f"{pair}-PERP error occured : {e}")
     
 # check if bot still running.
-LineNotify().sendMessage(f"{exchange} Bot still running")
+# LineNotify().sendMessage(f"{exchange} Bot still running")

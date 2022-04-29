@@ -91,14 +91,14 @@ class TradingSignal():
         self.df_ohlcv    = pd.concat([self.df_ohlcv, fastEMA, slowEMA, rsi, bBands], axis=1)
 
         count = len(self.df_ohlcv)
-        self.EMA_fast_A = self.df_ohlcv[f"EMA_{fastEmaLength}"][count-1]  
-        self.EMA_fast_B = self.df_ohlcv[f"EMA_{fastEmaLength}"][count-2]
+        self.EMA_fast_A = self.df_ohlcv[f"EMA_{fastEmaLength}"][count-2]  
+        self.EMA_fast_B = self.df_ohlcv[f"EMA_{fastEmaLength}"][count-3]
 
-        self.EMA_slow_A = self.df_ohlcv[f"EMA_{slowEmaLength}"][count-1]
-        self.EMA_slow_B = self.df_ohlcv[f"EMA_{slowEmaLength}"][count-2]
+        self.EMA_slow_A = self.df_ohlcv[f"EMA_{slowEmaLength}"][count-2]
+        self.EMA_slow_B = self.df_ohlcv[f"EMA_{slowEmaLength}"][count-3]
 
-        self.rsi = round(self.df_ohlcv[f"RSI_{rsiLength}"][count-1], 2)
-        self.MidBBands = self.df_ohlcv[f"BBM_{BBandsLength}_{std}.0"][count-1]
+        self.rsi = round(self.df_ohlcv[f"RSI_{rsiLength}"][count-2], 2)
+        self.MidBBands = self.df_ohlcv[f"BBM_{BBandsLength}_{std}.0"][count-2]
 
         self.closePrice = self.df_ohlcv['close'][count-1]
 
